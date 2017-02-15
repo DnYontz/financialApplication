@@ -11,19 +11,19 @@
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:layout_marginTop="10dp">
+        <EditText
+            p1:inputType="numberDecimal"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/totalBalance"
+            p1:layout_toRightOf="@+id/textView1"
+            p1:text="$500" />
         <TextView
             p1:text="Your Current Balance is: "
             p1:textAppearance="?android:attr/textAppearanceLarge"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
             p1:id="@+id/textView1" />
-        <TextView
-            p1:text="$0000"
-            p1:textAppearance="?android:attr/textAppearanceLarge"
-            p1:layout_width="wrap_content"
-            p1:layout_height="wrap_content"
-            p1:id="@+id/textView2"
-            p1:layout_toRightOf="@id/textView1" />
     </RelativeLayout>
     <RelativeLayout
         p1:minWidth="25px"
@@ -36,11 +36,11 @@
             p1:text="Transaction Details"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
-            p1:id="@+id/button2"
-            p1:layout_toRightOf="@+id/button1" />
+            p1:id="@+id/transactionDetailsButton"
+            p1:layout_toRightOf="@+id/addTransactionButton" />
         <Button
             p1:text="Add Transaction"
-            p1:id="@+id/button1"
+            p1:id="@+id/addTransactionButton"
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content" />
     </RelativeLayout>
