@@ -15,8 +15,15 @@ namespace financialApplication
             var addTransactionButton = FindViewById<Button>(Resource.Id.addTransactionButton);
             addTransactionButton.Click += delegate {
                 StartActivity(typeof(AddTransactionActivity));
-
             };
+
+            var backToMainButton = FindViewById<Button>(Resource.Id.backToMainButton);
+            backToMainButton.Click += delegate
+            {
+                StartActivity(typeof(MainActivity));
+            };
+
+            
 
             // Set our view from the "main" layout resource
 
