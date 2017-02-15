@@ -66,6 +66,9 @@ namespace financialApplication
 			// aapt resource value: 0x7f050009
 			public const int backToMainButton = 2131034121;
 			
+			// aapt resource value: 0x7f05000d
+			public const int button1 = 2131034125;
+			
 			// aapt resource value: 0x7f050000
 			public const int linearLayout1 = 2131034112;
 			
@@ -117,6 +120,9 @@ namespace financialApplication
 			
 			// aapt resource value: 0x7f030001
 			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int TransactionDetailsLayout = 2130903042;
 			
 			static Layout()
 			{

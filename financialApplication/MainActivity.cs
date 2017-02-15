@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace financialApplication
 {
-    [Activity(Label = "financialApplication", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Financial Application", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -15,6 +15,12 @@ namespace financialApplication
             var addTransactionButton = FindViewById<Button>(Resource.Id.addTransactionButton);
             addTransactionButton.Click += delegate {
                 StartActivity(typeof(AddTransactionActivity));
+            };
+
+            var transactionDetailsButton = FindViewById<Button>(Resource.Id.transactionDetailsButton);
+            transactionDetailsButton.Click += delegate
+            {
+                StartActivity(typeof(TransactionDetailsActivity));
             };
 
 
