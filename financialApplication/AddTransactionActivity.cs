@@ -21,12 +21,14 @@ namespace financialApplication
             SetContentView(Resource.Layout.AddTransactionLayout);
 
             var backToMainButton = FindViewById<Button>(Resource.Id.backToMainButton);
-            backToMainButton.Click += delegate
-            {
-                StartActivity(typeof(MainActivity));
-            };
+            backToMainButton.Click += BackToMainButton_Click;
 
             // Create your application here
+        }
+
+        private void BackToMainButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
     }
 }

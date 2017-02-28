@@ -20,7 +20,14 @@ namespace financialApplication
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.TransactionDetailsLayout);
 
+            var secondBackToMainButton = FindViewById<Button>(Resource.Id.secondBackToMainButton);
+            secondBackToMainButton.Click += SecondBackToMainButton_Click;
             // Create your application here
+        }
+
+        private void SecondBackToMainButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
     }
 }

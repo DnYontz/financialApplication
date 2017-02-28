@@ -13,19 +13,26 @@ namespace financialApplication
             SetContentView(Resource.Layout.Main);
 
             var addTransactionButton = FindViewById<Button>(Resource.Id.addTransactionButton);
-            addTransactionButton.Click += delegate {
-                StartActivity(typeof(AddTransactionActivity));
-            };
+            addTransactionButton.Click += AddTransactionButton_Click1;
 
             var transactionDetailsButton = FindViewById<Button>(Resource.Id.transactionDetailsButton);
-            transactionDetailsButton.Click += delegate
-            {
-                StartActivity(typeof(TransactionDetailsActivity));
-            };
+            transactionDetailsButton.Click += TransactionDetailsButton_Click;
+
+
 
 
             // Set our view from the "main" layout resource
 
+        }
+
+        private void TransactionDetailsButton_Click(object sender, System.EventArgs e)
+        {
+            StartActivity(typeof(TransactionDetailsActivity));
+        }
+
+        private void AddTransactionButton_Click1(object sender, System.EventArgs e)
+        {
+            StartActivity(typeof(AddTransactionActivity));
         }
     }
 }
