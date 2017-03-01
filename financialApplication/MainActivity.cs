@@ -19,8 +19,6 @@ namespace financialApplication
             transactionDetailsButton.Click += TransactionDetailsButton_Click;
 
 
-
-
             // Set our view from the "main" layout resource
 
         }
