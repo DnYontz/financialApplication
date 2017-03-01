@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTransactionActivity.cs" />
+    <Compile Include="transactionListViewAdapter.cs" />
+    <Compile Include="Transactions.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +67,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\TransactionDetailsLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\transactionListViewTemplate.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

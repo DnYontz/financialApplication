@@ -20,12 +20,34 @@ namespace financialApplication
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.TransactionDetailsLayout);
 
-            var secondBackToMainButton = FindViewById<Button>(Resource.Id.secondBackToMainButton);
-            secondBackToMainButton.Click += SecondBackToMainButton_Click;
-            // Create your application here
+            var backButton = FindViewById<Button>(Resource.Id.backButton);
+            backButton.Click += BackButton_Click;
+
+
+            var transactionListView = FindViewById<ListView>(Resource.Id.transactionListView);
+            List<Transaction> transactions = new List<Transaction>();
+
+            for (int i = 0; i < 20; i++) {
+                Transaction transaction = new Transaction();
+                transaction.ID = i + 1;
+                transaction.TransactionAmount = (i + 1) * 2.45;
+                transaction.TransactionName = "Place " + 1;
+                transaction.TransactionDate = DateTime.Now;
+                transactions.Add(transaction);
+
+            }
+
+            var adapter = new transactionListViewAdapter(this, transactions);
+
+            transactionListView.Adapter = adapter;
+
+
+
         }
 
-        private void SecondBackToMainButton_Click(object sender, EventArgs e)
+        
+
+        private void BackButton_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(MainActivity));
         }
