@@ -9,16 +9,20 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SQLite;
 
 namespace financialApplication
 {
-    class Transaction
+    public class Transaction
     {
+        [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public string TransactionName { get; set; }
         public DateTime TransactionDate { get; set; }
         public double TransactionAmount { get; set; }
         public static int Count { get; internal set; }
+
+
     }
 
 
